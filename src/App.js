@@ -1,10 +1,11 @@
 import './App.scss'
-import { Navigation } from './components'
+import { Navigation, Header } from './components'
 
 function App() {
   return (
     <div className='App'>
-      <Navigation></Navigation>
+      <Navigation />
+      <Header />
     </div>
   )
 }
