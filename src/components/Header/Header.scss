@@ -1,5 +1,8 @@
 .header {
   position: absolute;
+  display: flex;
+  width: 80%;
+  justify-content: space-between;
   .search__form {
     .search__input {
       height: 45px;
@@ -8,10 +11,28 @@
       border-radius: 100px;
       background: #27292d;
       background-image: url('../accets/img/searchIcon.svg');
-      background-position: 10px 10px;
+      background-position: 1rem 1rem;
       background-repeat: no-repeat;
       padding-left: 50px;
-      padding-bottom: 5px;
+    }
+  }
+  .profile {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    width: 11%;
+    background: #27292d;
+    border-radius: 25px;
+    background-image: url('../accets/img/profileIcon.svg');
+    background-position: 10rem 1.5rem;
+    background-repeat: no-repeat;
+    &__avatar {
+      border-radius: 25px;
+    }
+    &__name {
+      color: #fff;
+      font-size: 16px;
+      margin-left: 5%;
     }
   }
 }
