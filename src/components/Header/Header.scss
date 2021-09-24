@@ -1,8 +1,9 @@
 .header {
-  position: absolute;
   display: flex;
-  width: 80%;
   justify-content: space-between;
+  width: 80%;
+  height: 100%;
+  margin-top: 3%;
   .search__form {
     .search__input {
       height: 45px;
@@ -20,7 +21,7 @@
     display: flex;
     align-items: center;
     cursor: pointer;
-    width: 11%;
+    width: 170px;
     background: #27292d;
     border-radius: 25px;
     background-image: url('../accets/img/profileIcon.svg');

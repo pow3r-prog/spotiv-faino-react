@@ -3,7 +3,7 @@ import userImage from '../accets/img/userImage.jpg'
 
 const Header = () => {
     return (
-        <div className="container">
+        // <div className="container">
             <div className='header'>
                 <form className="search__form">
                     <input type="text" placeholder='Search song...' className='search__input' />
@@ -14,7 +14,7 @@ const Header = () => {
                     <div></div>
                 </div>
             </div>
-        </div>
+        // </div>
     )
 }
 

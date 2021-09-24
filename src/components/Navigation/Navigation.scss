@@ -3,14 +3,14 @@
   flex-wrap: wrap;
   justify-content: center;
   height: 100vh;
-  width: 72%;
   border-right: 1px solid #393b48;
+  width: 75%;
   .logo {
     display: flex;
     align-items: center;
     justify-content: center;
     margin-top: 2rem;
-    height: 6%;
+    height: 10%;
     width: 100%;
   }
   .navigation__list {
@@ -18,9 +18,9 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    height: 25%;
+    height: auto;
     width: 30%;
-    margin-bottom: 10rem;
+    margin-bottom: 22rem;
     &_item {
       display: flex;
       justify-content: center;

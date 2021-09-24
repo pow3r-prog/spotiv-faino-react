@@ -1,2 +1,7 @@
 @import './components/libs/nullstyle.scss';
 @import './components/mainStyle.scss';
+
+.App {
+  display: flex;
+  flex-wrap: wrap;
+}
