@@ -7,31 +7,29 @@ import favoriteIcon from '../accets/img/favoriteIcon.svg'
 
 const Navigation = () => {
     return ( 
-        <div className="container">
-            <div className='navigation'>
-                <div className='logo'>
-                    <Link style={{ textDecoration: 'none' }} to='/'>
-                        <img src={logoIcon} alt='logo'></img>
-                    </Link>
-                </div>
-                <ul className='navigation__list'>
-                    <li className="navigation__list_item">
-                        <Link to='/'>
-                            <img src={homeIcon} alt='home'></img>
-                        </Link>
-                    </li>
-                    <li className="navigation__list_item">
-                        <Link to='/'>
-                            <img src={libraryIcon} alt='library'></img>
-                        </Link>
-                    </li>
-                    <li className="navigation__list_item">
-                        <Link to='/'>
-                                <img src={favoriteIcon} alt='favorite'></img>
-                        </Link>
-                    </li>
-                </ul>
+        <div className='navigation'>
+            <div className='logo'>
+                <Link style={{ textDecoration: 'none' }} to='/'>
+                    <img src={logoIcon} alt='logo'></img>
+                </Link>
             </div>
+            <ul className='navigation__list'>
+                <li className="navigation__list_item">
+                    <Link to='/'>
+                        <img src={homeIcon} alt='home'></img>
+                    </Link>
+                </li>
+                <li className="navigation__list_item">
+                    <Link to='/'>
+                        <img src={libraryIcon} alt='library'></img>
+                    </Link>
+                </li>
+                <li className="navigation__list_item">
+                    <Link to='/'>
+                            <img src={favoriteIcon} alt='favorite'></img>
+                    </Link>
+                </li>
+            </ul>
         </div>
     )
 }

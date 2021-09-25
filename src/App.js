@@ -1,11 +1,11 @@
 import './App.scss'
-import { Navigation, Header, MainPage } from './components'
+import { Navigation, MainPage } from './components'
 
 function App() {
   return (
     <div className='App'>
       <Navigation />
-      <Header />
+      {/* <Header /> */}
       <MainPage />
     </div>
   )
