@@ -1,0 +1,35 @@
+//player
+.player {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  border-top: 1px solid #393b48;
+  background: #191b1f;
+}
+//details
+.player__details {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 20%;
+  &_img {
+    img {
+      width: 100px;
+      height: 100px;
+    }
+  }
+  .details__text {
+    margin-left: 5%;
+    &_title {
+      color: #fff;
+    }
+    &_artist {
+      color: #ababab;
+    }
+  }
+}
+//controls
