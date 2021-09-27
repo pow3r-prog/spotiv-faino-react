@@ -33,3 +33,21 @@
   }
 }
 //controls
+.player__controls {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  width: 7%;
+  .skip__btn {
+    color: grey;
+    background: #212429;
+    width: 35px;
+    height: 35px;
+    border-radius: 100px;
+  }
+  .play__btn {
+    width: 35px;
+    height: 35px;
+    border-radius: 100px;
+  }
+}
