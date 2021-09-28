@@ -44,7 +44,6 @@ const Player = (props) => {
             <audio src={props.songs[props.currentSongIndex].src} ref={audioEl}></audio>
             <Details song={props.songs[props.currentSongIndex]} />
             <Controls isPlaying={isPlaying} setIsPlaying={setIsPlaying} SkipSong={SkipSong} />
-            <p>Next up: <span>{props.songs[props.nextSongIndex].title} by {props.songs[props.nextSongIndex].artist}</span></p>
         </div>
     )
 }
