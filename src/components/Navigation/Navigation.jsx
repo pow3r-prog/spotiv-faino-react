@@ -5,11 +5,13 @@ import homeIcon from '../accets/img/homeIcon.svg'
 import libraryIcon from '../accets/img/libraryIcon.svg'
 import favoriteIcon from '../accets/img/favoriteIcon.svg'
 
+
+
 const Navigation = () => {
     return ( 
         <div className='navigation'>
             <div className='logo'>
-                <Link style={{ textDecoration: 'none' }} to='/'>
+                <Link to='/'>
                     <img src={logoIcon} alt='logo'></img>
                 </Link>
             </div>
@@ -20,12 +22,12 @@ const Navigation = () => {
                     </Link>
                 </li>
                 <li className="navigation__list_item">
-                    <Link to='/'>
+                    <Link to='/library'>
                         <img src={libraryIcon} alt='library'></img>
                     </Link>
                 </li>
                 <li className="navigation__list_item">
-                    <Link to='/'>
+                    <Link to='/favorite'>
                             <img src={favoriteIcon} alt='favorite'></img>
                     </Link>
                 </li>

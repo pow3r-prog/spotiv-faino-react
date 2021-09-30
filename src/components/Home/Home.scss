@@ -1,0 +1,105 @@
+//header
+.header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 5%;
+  margin-top: 3%;
+  .search__form {
+    width: 20%;
+    .search__input {
+      width: 100%;
+      height: 100%;
+      border: none;
+      border-radius: 100px;
+      background: #27292d;
+      background-image: url('../accets/img/searchIcon.svg');
+      background-position: 5% 50%;
+      background-repeat: no-repeat;
+      padding-left: 20%;
+    }
+  }
+  .profile {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    width: 11%;
+    background: #27292d;
+    border-radius: 25px;
+    background-image: url('../accets/img/profileIcon.svg');
+    background-position: 90% 50%;
+    background-repeat: no-repeat;
+    &__avatar {
+      height: 100%;
+      border-radius: 25px;
+    }
+    &__name {
+      color: #fff;
+      font-size: 16px;
+      margin-left: 5%;
+    }
+  }
+}
+//main content
+.main__playlists {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 1%;
+  width: 100%;
+  height: 80%;
+  // background: rgba(255, 255, 255, 0.5);
+  .your__playlists {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 70%;
+    .playlists__title {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      height: 10%;
+      &_text {
+        color: #fff;
+        font-size: 36px;
+        line-height: 49px;
+      }
+      &_button {
+        color: #bdbdbd;
+        cursor: pointer;
+        font-size: 18px;
+        line-height: 25px;
+      }
+    }
+    .playlists__list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      width: 100%;
+      margin-top: 5%;
+      &_item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        justify-content: flex-start;
+        margin-top: 2%;
+        font-size: 22px;
+        line-height: 18px;
+        color: #fff;
+        background: linear-gradient(
+          94.2deg,
+          #393b48 0%,
+          rgba(57, 59, 72, 0.05) 100%
+        );
+        border: 1px solid #393b48;
+        border-radius: 25px;
+        width: 460px;
+        height: 100px;
+        img {
+          margin-right: 15%;
+        }
+      }
+    }
+  }
+}
