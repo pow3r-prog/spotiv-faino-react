@@ -1,6 +1,6 @@
 import './App.scss'
 import { useState } from 'react'
-import { Navigation, Home, MusicPlayer, FavoriteSongs } from './components'
+import { Navigation, Header, Home, MusicPlayer, FavoriteSongs } from './components'
 import { Switch, Route } from 'react-router-dom'
 
 function App() {
@@ -31,10 +31,12 @@ function App() {
     },
   ])
 
+
   const [currentSongIndex, setCurrentSongIndex] = useState(0)
   return (
     <div className='App'>
       <Navigation />
+      <Header />
       <Switch>
         <Route exact path='/' component={Home} />
         <Route path='/favorite' component={FavoriteSongs} />

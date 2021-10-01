@@ -1,4 +1,5 @@
 export { default as Navigation } from './Navigation/Navigation'
+export { default as Header} from './Header/Header'
 export { default as Home } from './Home/Home'
 export { default as MusicPlayer } from './MusicPlayer/Player'
 export { default as FavoriteSongs } from './FavoriteSongs/FavoriteSongs'
