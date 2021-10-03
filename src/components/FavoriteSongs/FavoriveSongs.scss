@@ -1,0 +1,14 @@
+.favorite__songs {
+  display: flex;
+  margin-top: 13%;
+  width: 100%;
+  color: #fff;
+  background: rgb(179, 110, 110);
+  .songs__list {
+    width: 100%;
+    background: rgba(7, 192, 63, 0.52);
+    &_item {
+      height: 54px;
+    }
+  }
+}
