@@ -1,14 +1,15 @@
 import React, {useState, useRef, useEffect} from 'react'
 import Controls from './Controls'
 import Details from './Details'
+import Slider from '@mui/material/Slider'
 
 const Player = (props) => {
     const audioEl = useRef(null)
     const [isPlaying, setIsPlaying] = useState(false)
-    // const [volume, setVolume] = useState(50)
-    // const handleVolumeChange = (event, newValue) => {
-    //     setVolume(newValue);
-    // };
+    const [volume, setVolume] = useState(50)
+    const handleVolumeChange = (event, newValue) => {
+        setVolume(newValue);
+    };
 
     useEffect(() => {
         if (isPlaying) {
@@ -18,9 +19,9 @@ const Player = (props) => {
         }
     })
 
-    // useEffect(() => {
-    //     audioEl.current.volume = volume / 100
-    // })
+    useEffect(() => {
+        audioEl.current.volume = volume / 100
+    })
 
     const SkipSong = (forwards = true) => {
         if (forwards) {
@@ -52,7 +53,7 @@ const Player = (props) => {
             <audio src={props.songs[props.currentSongIndex].src} ref={audioEl}></audio>
             <Details song={props.songs[props.currentSongIndex]} />
             <Controls isPlaying={isPlaying} setIsPlaying={setIsPlaying} SkipSong={SkipSong} />
-
+            <Slider style={{width: '7%', marginRight: '5%'}} value={volume} onChange={handleVolumeChange}/>
         </div>
     )
 }

@@ -1,6 +1,5 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-// import Slider from '@mui/material/Slider'
 import { faPlay, faPause, faForward, faBackward } from '@fortawesome/free-solid-svg-icons'
 
 const Controls = (props) => {
@@ -22,7 +21,6 @@ const Controls = (props) => {
                     <input className="song__duration_slider" type="range"  min='0' max='100'/>
                 </div>
             </div>
-            
             {/* <div className="player__sound">
                 <input className="player__sound_range" type="range"  min='0' max='100'/>
             </div> */}
