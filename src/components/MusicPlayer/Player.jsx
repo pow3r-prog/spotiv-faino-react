@@ -5,6 +5,10 @@ import Details from './Details'
 const Player = (props) => {
     const audioEl = useRef(null)
     const [isPlaying, setIsPlaying] = useState(false)
+    // const [volume, setVolume] = useState(50)
+    // const handleVolumeChange = (event, newValue) => {
+    //     setVolume(newValue);
+    // };
 
     useEffect(() => {
         if (isPlaying) {
@@ -12,7 +16,11 @@ const Player = (props) => {
         } else {
             audioEl.current.pause()
         }
-    });
+    })
+
+    // useEffect(() => {
+    //     audioEl.current.volume = volume / 100
+    // })
 
     const SkipSong = (forwards = true) => {
         if (forwards) {
@@ -44,6 +52,7 @@ const Player = (props) => {
             <audio src={props.songs[props.currentSongIndex].src} ref={audioEl}></audio>
             <Details song={props.songs[props.currentSongIndex]} />
             <Controls isPlaying={isPlaying} setIsPlaying={setIsPlaying} SkipSong={SkipSong} />
+
         </div>
     )
 }
