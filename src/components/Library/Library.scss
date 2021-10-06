@@ -1,0 +1,33 @@
+.library__list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 2%;
+  width: 100%;
+  height: 100%;
+  &_item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    cursor: pointer;
+    height: 200px;
+    width: 150px;
+    background: linear-gradient(
+      94.2deg,
+      #393b48 0%,
+      rgba(57, 59, 72, 0.05) 100%
+    );
+    border: 2px solid #575a6d;
+    border-radius: 10%;
+    margin: 1%;
+    img {
+      margin-top: 10%;
+      height: 100px;
+      width: 100px;
+    }
+    div {
+      color: #fff;
+      margin-top: 20%;
+    }
+  }
+}

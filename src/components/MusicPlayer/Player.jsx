@@ -3,10 +3,13 @@ import Controls from './Controls'
 import Details from './Details'
 import Slider from '@mui/material/Slider'
 
+
 const Player = (props) => {
     const audioEl = useRef(null)
     const [isPlaying, setIsPlaying] = useState(false)
     const [volume, setVolume] = useState(50)
+    // const [duration, setDuration] = useState(0)
+    
     const handleVolumeChange = (event, newValue) => {
         setVolume(newValue);
     };
@@ -53,6 +56,7 @@ const Player = (props) => {
             <audio src={props.songs[props.currentSongIndex].src} ref={audioEl}></audio>
             <Details song={props.songs[props.currentSongIndex]} />
             <Controls isPlaying={isPlaying} setIsPlaying={setIsPlaying} SkipSong={SkipSong} />
+            {/* <Slider  style={{width: '7%', marginRight: '5%'}} className="song__duration"/> */}
             <Slider style={{width: '7%', marginRight: '5%'}} value={volume} onChange={handleVolumeChange}/>
         </div>
     )
