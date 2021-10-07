@@ -8,11 +8,17 @@ const Player = (props) => {
     const audioEl = useRef(null)
     const [isPlaying, setIsPlaying] = useState(false)
     const [volume, setVolume] = useState(50)
-    // const [duration, setDuration] = useState(0)
+    const [seekTime, setSeekTime] = useState(0)
+    const [currTime, setCurrTime] = useState(0)
+    const [duration, setDurationTime] = useState(0)
     
     const handleVolumeChange = (event, newValue) => {
-        setVolume(newValue);
-    };
+        setVolume(newValue)
+    }
+    const handleSeekChange = (event, newValue) => {
+        audioEl.current.currentTime =(newValue*duration)/100;
+        setSeekTime(newValue)
+    }
 
     useEffect(() => {
         if (isPlaying) {
@@ -24,7 +30,18 @@ const Player = (props) => {
 
     useEffect(() => {
         audioEl.current.volume = volume / 100
+        audioEl.current.onloadeddata = () => {
+            if (audioEl.current != null)
+            setDurationTime(audioEl.current.duration)
+        };
+        setInterval(() => {
+            if (audioEl.current !== null)
+                setCurrTime(audioEl.current.currentTime)
+        })
     })
+    useEffect(() => {
+        setSeekTime((currTime) / (duration / 100))
+    }, [currTime, duration])
 
     const SkipSong = (forwards = true) => {
         if (forwards) {
@@ -56,10 +73,12 @@ const Player = (props) => {
             <audio src={props.songs[props.currentSongIndex].src} ref={audioEl}></audio>
             <Details song={props.songs[props.currentSongIndex]} />
             <Controls isPlaying={isPlaying} setIsPlaying={setIsPlaying} SkipSong={SkipSong} />
-            {/* <Slider  style={{width: '7%', marginRight: '5%'}} className="song__duration"/> */}
+            {/* <input className="song__duration_slider" type="range"  min='0' max='100' value={duration} onChange={handleDurationChange}/> */}
+            <Slider style={{width: '30%', marginRight: '5%'}}  value={seekTime} onChange={handleSeekChange}/>
             <Slider style={{width: '7%', marginRight: '5%'}} value={volume} onChange={handleVolumeChange}/>
         </div>
     )
+
 }
 
 export default Player
