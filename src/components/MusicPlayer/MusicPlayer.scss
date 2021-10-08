@@ -36,18 +36,20 @@
 .player__controls {
   display: flex;
   flex-wrap: nowrap;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 50%;
-  margin-left: 15%;
   .player__buttons {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    width: 40%;
+    align-items: center;
+    width: 100%;
     .play__buttons {
       display: flex;
       justify-content: space-between;
-      width: 30%;
+      width: 35%;
       .skip__btn {
         color: grey;
         background: #212429;

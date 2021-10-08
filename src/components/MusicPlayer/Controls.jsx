@@ -17,13 +17,7 @@ const Controls = (props) => {
                         <FontAwesomeIcon icon={faForward} />
                     </button>
                 </div>
-                <div className="song__duration">
-                    <input className="song__duration_slider" type="range"  min='0' max='100'/>
-                </div>
             </div>
-            {/* <div className="player__sound">
-                <input className="player__sound_range" type="range"  min='0' max='100'/>
-            </div> */}
         </div>
     )
 }

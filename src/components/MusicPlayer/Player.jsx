@@ -72,9 +72,10 @@ const Player = (props) => {
         <div className="player">
             <audio src={props.songs[props.currentSongIndex].src} ref={audioEl}></audio>
             <Details song={props.songs[props.currentSongIndex]} />
-            <Controls isPlaying={isPlaying} setIsPlaying={setIsPlaying} SkipSong={SkipSong} />
-            {/* <input className="song__duration_slider" type="range"  min='0' max='100' value={duration} onChange={handleDurationChange}/> */}
-            <Slider style={{width: '30%', marginRight: '5%'}}  value={seekTime} onChange={handleSeekChange}/>
+            <div className="player__controls">
+                <Controls isPlaying={isPlaying} setIsPlaying={setIsPlaying} SkipSong={SkipSong} />
+                <Slider style={{width: '60%'}}  value={seekTime} onChange={handleSeekChange}/>
+            </div>
             <Slider style={{width: '7%', marginRight: '5%'}} value={volume} onChange={handleVolumeChange}/>
         </div>
     )
