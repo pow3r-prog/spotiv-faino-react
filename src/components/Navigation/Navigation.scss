@@ -19,21 +19,67 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    flex-direction: column;
     height: auto;
     width: 30%;
-    margin-bottom: 22rem;
-    &_item {
+    height: 25%;
+    margin-bottom: 12rem;
+    .active {
+      background: #0082f4;
+      border-radius: 25px;
+      box-shadow: 0px 0px 15px #0082f4;
+    }
+    .home__page {
       display: flex;
       justify-content: center;
       align-items: center;
-      width: 60px;
       height: 60px;
+      width: 60px;
+      // background: #0082f4;
+      // border-radius: 25px;
+      // box-shadow: 0px 0px 15px #0082f4;
       &:hover {
         background: #0082f4;
         border-radius: 25px;
         box-shadow: 0px 0px 15px #0082f4;
       }
     }
+    .library__page {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 60px;
+      width: 60px;
+      &:hover {
+        background: #0082f4;
+        border-radius: 25px;
+        box-shadow: 0px 0px 15px #0082f4;
+      }
+    }
+    .favorite__page {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 60px;
+      width: 60px;
+      &:hover {
+        background: #0082f4;
+        border-radius: 25px;
+        box-shadow: 0px 0px 15px #0082f4;
+      }
+    }
+    // div {
+    //   display: flex;
+    //   justify-content: center;
+    //   align-items: center;
+    //   width: 60px;
+    //   height: 60px;
+    // &:hover {
+    //   background: #0082f4;
+    //   border-radius: 25px;
+    //   box-shadow: 0px 0px 15px #0082f4;
+    // }
+    // }
   }
 }

@@ -15,23 +15,17 @@ const Navigation = () => {
                     <img src={logoIcon} alt='logo'></img>
                 </Link>
             </div>
-            <ul className='navigation__list'>
-                <li className="navigation__list_item">
-                    <Link to='/'>
-                        <img src={homeIcon} alt='home'></img>
-                    </Link>
-                </li>
-                <li className="navigation__list_item">
-                    <Link to='/library'>
-                        <img src={libraryIcon} alt='library'></img>
-                    </Link>
-                </li>
-                <li className="navigation__list_item">
-                    <Link to='/favorite'>
-                            <img src={favoriteIcon} alt='favorite'></img>
-                    </Link>
-                </li>
-            </ul>
+            <div className="navigation__list">
+                <Link className='home__page' to='/'>
+                    <img src={homeIcon} alt='home'></img>
+                </Link>
+                <Link className='library__page' to='/library'>
+                    <img src={libraryIcon} alt='library'></img>
+                </Link>
+                <Link className='favorite__page' to='/favorite'>
+                        <img src={favoriteIcon} alt='favorite'></img>
+                </Link>
+            </div>  
         </div>
     )
 }
