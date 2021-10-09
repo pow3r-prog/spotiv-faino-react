@@ -16,7 +16,7 @@ const Player = (props) => {
         setVolume(newValue)
     }
     const handleSeekChange = (event, newValue) => {
-        audioEl.current.currentTime =(newValue*duration)/100;
+        audioEl.current.currentTime =(newValue*duration)/100
         setSeekTime(newValue)
     }
 
@@ -42,6 +42,15 @@ const Player = (props) => {
     useEffect(() => {
         setSeekTime((currTime) / (duration / 100))
     }, [currTime, duration])
+
+    function formatTime(secs) {
+        const t = new Date(1970, 0, 1)
+        t.setSeconds(secs)
+        let s = t.toTimeString().substr(0, 8)
+        if (secs > 86399)
+            s = Math.floor((t - Date.parse("1/1/70")) / 3600000) + s.substr(2)
+        return s.substring(3)
+    }
 
     const SkipSong = (forwards = true) => {
         if (forwards) {
@@ -74,7 +83,14 @@ const Player = (props) => {
             <Details song={props.songs[props.currentSongIndex]} />
             <div className="player__controls">
                 <Controls isPlaying={isPlaying} setIsPlaying={setIsPlaying} SkipSong={SkipSong} />
-                <Slider style={{width: '60%'}}  value={seekTime} onChange={handleSeekChange}/>
+                <Slider style={{width: '60%'}}  value={seekTime} onChange={handleSeekChange}/>  
+            </div>
+            <div className="timer">
+                <p>
+                    <span>{formatTime(currTime)}</span>
+                    /
+                    <span>{formatTime(duration)}</span>
+                </p>
             </div>
             <Slider style={{width: '7%', marginRight: '5%'}} value={volume} onChange={handleVolumeChange}/>
         </div>
