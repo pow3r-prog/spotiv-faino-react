@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom'
 import logoIcon from '../accets/img/logo.svg'
 import homeIcon from '../accets/img/homeIcon.svg'
 import libraryIcon from '../accets/img/libraryIcon.svg'
@@ -11,20 +11,20 @@ const Navigation = () => {
     return ( 
         <div className='navigation'>
             <div className='logo'>
-                <Link to='/'>
+                <NavLink to='/home'>
                     <img src={logoIcon} alt='logo'></img>
-                </Link>
+                </NavLink>
             </div>
-            <div className="navigation__list">
-                <Link className='home__page' to='/'>
+            <div className='navigation__list'>
+                <NavLink className='home__page' activeClassName='home__page active' to='/home'>
                     <img src={homeIcon} alt='home'></img>
-                </Link>
-                <Link className='library__page' to='/library'>
+                </NavLink>
+                <NavLink className='library__page' activeClassName='library__page active' to='/library'>
                     <img src={libraryIcon} alt='library'></img>
-                </Link>
-                <Link className='favorite__page' to='/favorite'>
-                        <img src={favoriteIcon} alt='favorite'></img>
-                </Link>
+                </NavLink>
+                <NavLink  className='favorite__page' activeClassName='favorite__page active'  to='/favorite'>
+                    <img src={favoriteIcon} alt='favorite'></img>
+                </NavLink>
             </div>  
         </div>
     )

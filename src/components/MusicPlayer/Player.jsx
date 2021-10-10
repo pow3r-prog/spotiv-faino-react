@@ -74,18 +74,18 @@ const Player = (props) => {
                 }
 
                 return temp
-            });
+            })
         }
     }
     return (
-        <div className="player">
+        <div className='player'>
             <audio src={props.songs[props.currentSongIndex].src} ref={audioEl}></audio>
             <Details song={props.songs[props.currentSongIndex]} />
-            <div className="player__controls">
+            <div className='player__controls'>
                 <Controls isPlaying={isPlaying} setIsPlaying={setIsPlaying} SkipSong={SkipSong} />
                 <Slider style={{width: '60%'}}  value={seekTime} onChange={handleSeekChange}/>  
             </div>
-            <div className="timer">
+            <div className='timer'>
                 <p>
                     <span>{formatTime(currTime)}</span>
                     /

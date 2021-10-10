@@ -1,41 +1,42 @@
 .header {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    height: 50%;
-    margin-top: 3%;
-    .search__form {
-      width: 20%;
-      .search__input {
-        width: 100%;
-        height: 100%;
-        border: none;
-        border-radius: 100px;
-        background: #27292d;
-        background-image: url('../accets/img/searchIcon.svg');
-        background-position: 5% 50%;
-        background-repeat: no-repeat;
-        padding-left: 20%;
-      }
-    }
-    .profile {
-      display: flex;
-      align-items: center;
-      cursor: pointer;
-      width: 11%;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 50%;
+  margin-top: 3%;
+  .search__form {
+    width: 20%;
+    .search__input {
+      width: 100%;
+      height: 100%;
+      border: none;
+      color: #fff;
+      border-radius: 100px;
       background: #27292d;
-      border-radius: 25px;
-      background-image: url('../accets/img/profileIcon.svg');
-      background-position: 90% 50%;
+      background-image: url('../accets/img/searchIcon.svg');
+      background-position: 5% 50%;
       background-repeat: no-repeat;
-      &__avatar {
-        height: 100%;
-        border-radius: 25px;
-      }
-      &__name {
-        color: #fff;
-        font-size: 16px;
-        margin-left: 5%;
-      }
+      padding-left: 20%;
     }
   }
+  .profile {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    width: 11%;
+    background: #27292d;
+    border-radius: 25px;
+    background-image: url('../accets/img/profileIcon.svg');
+    background-position: 90% 50%;
+    background-repeat: no-repeat;
+    &__avatar {
+      height: 100%;
+      border-radius: 25px;
+    }
+    &__name {
+      color: #fff;
+      font-size: 16px;
+      margin-left: 5%;
+    }
+  }
+}

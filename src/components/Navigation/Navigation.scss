@@ -36,9 +36,6 @@
       align-items: center;
       height: 60px;
       width: 60px;
-      // background: #0082f4;
-      // border-radius: 25px;
-      // box-shadow: 0px 0px 15px #0082f4;
       &:hover {
         background: #0082f4;
         border-radius: 25px;
@@ -69,17 +66,5 @@
         box-shadow: 0px 0px 15px #0082f4;
       }
     }
-    // div {
-    //   display: flex;
-    //   justify-content: center;
-    //   align-items: center;
-    //   width: 60px;
-    //   height: 60px;
-    // &:hover {
-    //   background: #0082f4;
-    //   border-radius: 25px;
-    //   box-shadow: 0px 0px 15px #0082f4;
-    // }
-    // }
   }
 }

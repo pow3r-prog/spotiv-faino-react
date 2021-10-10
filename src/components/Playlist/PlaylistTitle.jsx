@@ -3,7 +3,7 @@ import './Playlist.scss'
 
 const PlaylistTitle = () => {
     return (
-        <div className="playlist__title">Favorite songs</div>
+        <div className='playlist__title'>Favorite songs</div>
     )
 }
 
