@@ -22,13 +22,19 @@
   .profile {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     cursor: pointer;
-    width: 11%;
+    width: auto;
     background: #27292d;
     border-radius: 25px;
-    background-image: url('../accets/img/profileIcon.svg');
-    background-position: 90% 50%;
-    background-repeat: no-repeat;
+    // background-image: url('../accets/img/profileIcon.svg');
+    // background-position: 90% 50%;
+    // background-repeat: no-repeat;
+    .profile__links {
+      display: flex;
+      background: #000;
+      flex-direction: column;
+    }
     &__avatar {
       height: 100%;
       border-radius: 25px;

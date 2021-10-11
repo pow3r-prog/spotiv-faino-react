@@ -11,7 +11,7 @@ const Navigation = () => {
     return ( 
         <div className='navigation'>
             <div className='logo'>
-                <NavLink to='/home'>
+                <NavLink to='/'>
                     <img src={logoIcon} alt='logo'></img>
                 </NavLink>
             </div>
