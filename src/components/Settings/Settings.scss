@@ -1,0 +1,37 @@
+.settings {
+    width: 100%;
+    margin-top: 2%;
+    &__header {
+        width: 100%;
+        color: #fff;
+        font-size: 36px;
+    }
+    &__list {
+        margin-top: 3%;
+        .change__language {
+            h2 {
+                font-size: 24px;
+                color: #fff;
+            }
+            &_settings {
+                display: flex;
+                justify-content: space-between;
+                margin-top: 2%;
+                color: #BDBDBD;
+            }
+        }
+        .non-stop__settings {
+            margin-top: 3%;
+            h2 {
+                    font-size: 24px;
+                    color: #fff;
+            }
+            .non-stop__change {
+                display: flex;
+                justify-content: space-between;
+                margin-top: 2%;
+                color: #BDBDBD;
+            } 
+        }
+    }
+}

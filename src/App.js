@@ -6,6 +6,8 @@ import {
   FavoriteSongs,
   Library,
   SongsBase,
+  Profile,
+  Settings,
 } from './components'
 import { Switch, Route } from 'react-router-dom'
 
@@ -19,6 +21,8 @@ function App() {
         <Route exact path='/home' component={Home} />
         <Route path='/favorite' component={FavoriteSongs} />
         <Route path='/library' component={Library} />
+        <Route path='/profile' component={Profile} />
+        <Route path='/settings' component={Settings} />
       </Switch>
       <SongsBase />
     </div>
