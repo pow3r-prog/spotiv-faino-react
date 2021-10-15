@@ -18,6 +18,7 @@ const Profile = () => {
           document.removeEventListener("mousedown", checkIfClickedOutside)
         }
       }, [open])
+
     return (
         <div className='profile' onClick={() => setOpen(!open)} ref={ref}>
             <img className='profile__avatar' src={userImage} alt='avatar' />
