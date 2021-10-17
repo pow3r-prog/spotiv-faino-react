@@ -1,0 +1,22 @@
+.title {
+  display: flex;
+  flex-direction: row;
+  margin-top: 2%;
+  width: 100%;
+  &__photo {
+    height: 168px;
+    width: 168px;
+    border-radius: 100px;
+  }
+  .profile__info {
+    color: #fff;
+    margin-left: 2%;
+    h3 {
+      font-size: 24px;
+    }
+    .title__name {
+      font-size: 64px;
+      margin-top: 1%;
+    }
+  }
+}
